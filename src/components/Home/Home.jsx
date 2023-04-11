@@ -1,17 +1,24 @@
 import {useEffect, useState} from 'react';
 
 export default function Home() {
+
+    const [List, setList] = useState([]);
+
+    useEffect(() => {
+        fetch('https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic')
+        .then(res => res.json())
+        .then(data => setList(data.drinks))
+    }, [])
+
     return <>
         <h1>This is the home with Api</h1>
 
-        useEffect(() => {
-            fetch('https://fakestoreapi.com/products')
-            .then(res => res.json())
-            .then(data => console.log(data))
-        }, [])
-
-        {/* {fetch('https://fakestoreapi.com/products')
-            .then(response => response.json())
-            .then(json => console.log(json))} */}
+        {List.map(item => {
+            <div className="card">
+                {console.log(item.strDrink)}
+                {/* <img src={item.strDrinkThumb.rendered} alt={item.strDrinkThumb.rendered} /> */}
+                <h3>{item.strDrink}</h3>
+            </div>
+        })}
     </>
 }
