@@ -1,0 +1,27 @@
+.about {
+    margin: 2rem;
+
+    &__section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    &__img {
+        width: 40%;
+        border-radius: .5rem;
+    }
+
+    &__footer {
+        margin-top: 5rem;
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        & p {
+            margin: 0;
+        }
+    }
+}

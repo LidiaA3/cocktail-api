@@ -8,8 +8,8 @@
   --color-main-dark: #48777b;
   --color-dark: #1c1c1e;
 
-  color: var(--color-dark);
-  background-color: var(--color-light);
+  color: var(--color-light);
+  background-color: darken(#5da5ab, 60%);
 }
 
 html {
@@ -18,21 +18,18 @@ html {
 
 body {
   font-size: 2rem;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 a {
   font-weight: 500;
-  color: var(--color-main);
+  color: var(--color-light);
   text-decoration: inherit;
 }
 a:hover {
   color: var(--color-main-dark);
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -50,10 +47,10 @@ button {
   background-color: var(--color-main);
   cursor: pointer;
   transition: border-color 0.25s;
+  color: var(--color-light);
 }
 button:hover {
   background-color: var(--color-main-dark);
-  color: var(--color-light);
 }
 button:focus,
 button:focus-visible {
